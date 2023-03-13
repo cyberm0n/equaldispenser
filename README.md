@@ -1,6 +1,6 @@
 # equaldispenser
 
-##You can use this software in Windows Operating System via .exe file and work with .py file
+## You can use this software in Windows Operating System via .exe file and work with .py file
 
 
 
