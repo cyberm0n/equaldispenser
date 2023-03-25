@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import *
 import sys
 import pandas as pd
 import numpy as np
+import os
 
 dosyalar = ''
 
@@ -262,17 +263,20 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "EqualDispenser"))
         self.a5.setText(_translate("MainWindow", "EqualDispenser"))
         self.a6.setText(_translate("MainWindow", "By @cyberm0n"))
-        self.a12.setText(_translate("MainWindow", "Output As:"))
-        self.a12_2.setText(_translate("MainWindow", "Extras As:"))
-        self.a9_2.setText(_translate("MainWindow", "File Names"))
-        self.a10.setText(_translate("MainWindow", "Output"))
-        self.a10_2.setText(_translate("MainWindow", "Extra"))
-        self.a15_2.setText(_translate("MainWindow", "Choose"))
+        self.a12.setText(_translate("MainWindow", "Çıktılar"))
+        self.a12_2.setText(_translate("MainWindow", "Ekstralar"))
+        self.a9_2.setText(_translate("MainWindow", "Dosya Adları"))
+        self.a10.setText(_translate("MainWindow", "Çıktı"))
+        self.a10_2.setText(_translate("MainWindow", "Ekstra"))
+        self.a15_2.setText(_translate("MainWindow", "Seç"))
         self.a15_2.setShortcut(_translate("MainWindow", "Return"))
-        self.a15.setText(_translate("MainWindow", "Complete"))
+        self.a15.setText(_translate("MainWindow", "Tamamla"))
         self.a15.setShortcut(_translate("MainWindow", "Return"))
-        self.a15_3.setText(_translate("MainWindow", "Guidie"))
+        self.a15_3.setText(_translate("MainWindow", "Kılavuz"))
         self.a15_3.setShortcut(_translate("MainWindow", "Return"))
+
+def go():
+  os.system("start https://github.com/cyberm0n/equaldispenser")
 
 def e():
     absd=ui.a13_2.text().strip().split(',')
@@ -291,5 +295,6 @@ ui=Ui_MainWindow()
 ui.setupUi(penAna)
 penAna.show()
 ui.a15.clicked.connect(e)
+ui.a15_3.clicked.connect(go)
 
 sys.exit(Uygulama.exec_())
